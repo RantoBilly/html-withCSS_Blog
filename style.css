@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+body{
+    margin : 10px 80px;
+    font-family: 'Pacifico', cursive;
+}
+
+nav{
+    display:flex;      /* Pour aligner les elements*/
+    flex-wrap:wrap;
+    justify-content: space-between ; /*espacer vers la droite dans notre cas*/
+}
+nav h1{
+    font-size: 50px;
+}
+nav .onglets{
+    margin-top: 35px;  /* aligner les éléments avec class onglets avec le titre h1*/
+}
+nav .onglets a{
+    text-decoration: none;
+    color :rgb(211, 22, 22);
+    margin-right: 10px;        /*espacer les éléments de liens */
+}
+
+.articles{
+    margin-top: 30px;    /*espacer les éléments de section par rapport a ceux de nav*/
+}
+
+.articles .article{
+     display :flex;
+    flex-wrap: wrap;
+     margin-bottom: 30px;
+}
+
+.articles .article .left img{
+    height : 300px;
+    width : 500px;
+}
+
+.articles .article .right{
+    width:50%;              /*placer les descris a coté des images */
+    margin-left:40px; 
+}
+
+.right p.date{
+    color:rgba(0, 0, 0, 0.534);
+}
+
+.right h1{
+    color:rgb(211, 22, 22);
+}
+
+footer{
+    margin-top: 30px;
+}
+
+footer h2{
+    font-size: 20px;
+}
+
+@media screen and (max-width:640px){
+    body{
+        margin:10px 20px;
+    }
+    
+    nav .onglets{
+        margin-top:-10px;
+    }
+    .articles .article .left img{
+        width:100%;
+        height:100%;
+    }
+    
+    .articles .article .right{
+        margin:0;
+        max-width: 100%;
+    }
+}
